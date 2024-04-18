@@ -1,19 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Secondary"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TableRow
+        android:background="@color/Primary"
+        android:layout_height="80dp"
+        android:gravity="center">
+
+        <TextView
+            style="@style/Heading"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:text="@string/student_registration_form"
+            android:textColor="@color/white"
+
+            android:textStyle="bold|italic" />
+
+    </TableRow>
+
+<!--    <View-->
+<!--        android:layout_width="400dp"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="2dp"-->
+<!--        android:background="#ACA1A1" />-->
+
+
+    <TableRow
+        android:layout_marginTop="20dp"
+        android:gravity="start">
+
+        <TextView
+            style="@style/MyTextViews"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/name" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="5dp"
+        android:gravity="center">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/username"
+            android:hint="@string/usernameHint">
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/usernamei"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPersonName"
+                android:ems="15"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="10dp"
+        android:gravity="start">
+
+        <TextView
+            style="@style/MyTextViews"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/password" />
+
+    </TableRow>
+
+    <TableRow
+        android:gravity="center">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password"
+            android:hint="@string/PassowrdHint"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPassword"
+                android:ems="15"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="20dp"
+        android:gravity="end">
+
+        <CheckBox
+            android:id="@+id/chck"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:textSize="8pt"
+            android:textStyle="italic"
+            android:text="Remember me"/>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="5dp"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:textSize="9pt"
+            android:letterSpacing="0.05"
+            android:onClick="btnLoginOnClick"
+            android:text="Log in"/>
+
+    </TableRow>
+</TableLayout>

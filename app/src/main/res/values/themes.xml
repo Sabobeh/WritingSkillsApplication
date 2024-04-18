@@ -2,8 +2,31 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.WritingSkillsApplication" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/Primary</item>
+    </style>
+
+    <style name="MyTextViews">
+        <item name="android:textSize">12pt</item>
+        <item name="color">@color/Primary</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <style name="Heading">
+        <item name="android:textSize">15pt</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:textStyle">bold|italic</item>
+
     </style>
 
     <style name="Theme.WritingSkillsApplication" parent="Base.Theme.WritingSkillsApplication" />
+
+    <style name="Theme.WritingSkillsApplication.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.WritingSkillsApplication.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.WritingSkillsApplication.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

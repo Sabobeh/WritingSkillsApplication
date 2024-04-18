@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Secondary"
+    android:clickable="false"
+    android:gravity="top"
+    android:orientation="vertical"
+    tools:context=".HomeScreen">
+
+    <TextView
+        style="@style/Heading"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/Primary"
+        android:gravity="center"
+        android:text="@string/home_page"
+        android:textColor="@color/white"
+        android:textStyle="bold|italic" />
+
+
+    <TextView
+        android:id="@+id/txtMessagee"
+        style="@style/MyTextViews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="start"
+        android:text=" "
+        android:textSize="19dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/writing" />
+
+    <View
+        android:layout_width="400dp"
+        android:layout_height="2dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="@color/Primary" />
+
+    <TextView
+        style="@style/MyTextViews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="start"
+        android:text="Choose your skill level from below and continue:"
+        android:textSize="19dp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spnMenu"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp"
+        android:background="@color/Primary"
+        android:dropDownWidth="match_parent"
+        android:dropDownSelector="@android:drawable/arrow_down_float"
+        android:gravity="center"
+        android:outlineAmbientShadowColor="#984545"
+        android:outlineSpotShadowColor="#733A3A" />
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:onClick="btnContOnClick"
+        android:text="Continue" />
+</LinearLayout>
