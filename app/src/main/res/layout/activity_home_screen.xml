@@ -32,7 +32,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
         android:gravity="start"
-        android:text=" "
+        android:text=""
         android:textSize="19dp"
         android:textStyle="bold" />
 
@@ -63,19 +63,24 @@
         android:textSize="19dp"
         android:textStyle="bold" />
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/Primary"
+        android:layout_gravity="center"
+        android:gravity="top"
+        >
     <Spinner
         android:id="@+id/spnMenu"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="35dp"
-        android:background="@color/Primary"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:layout_gravity="top"
         android:dropDownWidth="match_parent"
         android:dropDownSelector="@android:drawable/arrow_down_float"
         android:gravity="center"
         android:outlineAmbientShadowColor="#984545"
         android:outlineSpotShadowColor="#733A3A" />
-
+    </LinearLayout>
     <Button
         android:id="@+id/btnSearch"
         android:layout_width="wrap_content"
