@@ -1,11 +1,16 @@
 package com.example.writingskillsapplication;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -67,6 +72,16 @@ public class Activity4 extends AppCompatActivity {
         ArrayAdapter<Resource> adapter = new ArrayAdapter<Resource>(Activity4.this,
                 android.R.layout.simple_list_item_1, arr);
         lstItems.setAdapter(adapter);
+
+        lstItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                Toast.makeText(Activity4.this, "I: "+adapter.getItem(position), Toast.LENGTH_LONG).show();
+                Uri uri = Uri.parse(adapter.getItem(position)+""); // missing 'http://' will cause crashed
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
     }
     private void setupViews() {
         lstItems = findViewById(R.id.lstItems);
